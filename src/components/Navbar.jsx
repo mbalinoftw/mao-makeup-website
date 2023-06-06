@@ -1,28 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Container from "./Container";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const lastScrollTop = useRef(0);
+
+  const handleScroll = () => {
+    const { pageYOffset } = window;
+    if (pageYOffset > 50 && pageYOffset > lastScrollTop.current) {
+      setIsVisible(false);
+    } else if (pageYOffset < lastScrollTop.current) {
+      setIsVisible(true);
+    }
+    lastScrollTop.current = pageYOffset;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
 
   const navbarLinks = [
     {
       label: "inicio",
-      url: "",
+      url: "#",
     },
     {
-      label: "acerca de mí",
-      url: "",
+      label: "quién soy",
+      url: "#about",
     },
     {
       label: "servicios",
-      url: "",
+      url: "#services",
     },
     {
       label: "galería",
-      url: "",
+      url: "#gallery",
     },
     {
       label: "contacto",
-      url: "",
+      url: "#contact",
     },
   ];
 
@@ -30,38 +52,53 @@ export default function Navbar() {
     {
       label: "whatsapp",
       url: "https://wa.me/5491123534749",
+      color: "#18B920",
     },
     {
       label: "instagram",
       url: "https://www.instagram.com/maomakeup_beauty/",
+      color: "#AC3292",
     },
   ];
 
   return (
-    <nav className="fixed z-10 top-0 left-0 right-0 bg-white">
-      <div className="max-w-screen-xl mx-auto p-6 flex items-center justify-between">
-        <a href="#" className="">
-          <img src="logo-light.png" alt="logo" className="object-cover w-24 mix-blend-multiply" />
-        </a>
-        <ul className="hidden md:flex items-center gap-4">
-          {navbarLinks.map((link, index) => (
-            <li key={index} className="">
-              <a href={link.url}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center gap-1">
-          <a href="#" className="w-12 h-12 hidden md:grid md:place-items-center text-white bg-green-500 rounded-full">
-            <i className="fa-brands fa-whatsapp text-2xl"></i>
+    <nav
+      className={`py-4 fixed z-10 top-0 left-0 right-0 bg-[#E5C5C6]/90 transform ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } transition duration-500`}>
+      <Container>
+        <div className="flex items-center justify-between">
+          <a href="#" className="">
+            <img srcSet="logo.png" alt="mao makeup logo" className="object-cover w-32" />
           </a>
-          <a href="#" className="w-12 h-12 hidden md:grid md:place-items-center text-white bg-purple-500 rounded-full">
-            <i className="fa-brands fa-instagram text-2xl"></i>
-          </a>
+          <ul className="hidden md:flex items-center gap-4">
+            {navbarLinks.map((link, index) => (
+              <li key={index} className="">
+                <a href={link.url} className="capitalize text-white text-lg hover:text-[#D3898A]">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <ul className="hidden md:flex items-center">
+            {socialLinks.map((link, index) => (
+              <li key={index} className="">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`w-8 h-8 hidden md:grid md:place-items-center text-white rounded-full`}>
+                  <i className={`fa-brands fa-${link.label} text-[${link.color}] text-2xl opacity-70`}></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <button className="block md:hidden text-2xl" id="open-btn" onClick={() => setIsOpen(true)}>
+            <i className="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <button className="block md:hidden text-2xl" id="open-btn" onClick={() => setIsOpen(true)}>
-          <i className="fa-solid fa-bars"></i>
-        </button>
-      </div>
+      </Container>
+
       {isOpen ? (
         <div className="h-screen fixed inset-0 bg-[#E0AEAD] overflow-hidden" id="mobile-menu">
           <div className="container mx-auto p-6 flex justify-end">
@@ -74,15 +111,17 @@ export default function Navbar() {
           </div>
           <div className="absolute top-0 left-0 h-full w-full grid place-items-center">
             <a href="#" className="animate__animated animate__fadeIn absolute top-16">
-              <img src="logo-light2.png" alt="logo" className="object-cover w-48" />
+              <img src="logo-mobile.png" alt="logo" className="object-cover w-48" />
             </a>
             <ul className="md:hidden flex flex-col gap-10 text-center text-3xl text-white" id="mobile-links">
               {navbarLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="animate__animated animate__fadeInUp text-xl font-bold hover:text-gray-500"
+                  className="animate__animated animate__fadeInUp text-xl font-bold hover:text-gray-500 capitalize"
                   style={{ animationDelay: `${index * 0.1}s` }}>
-                  <a href={link.url}>{link.label}</a>
+                  <a href={link.url} onClick={() => setIsOpen(false)}>
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>

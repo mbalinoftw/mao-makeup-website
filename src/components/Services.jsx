@@ -22,7 +22,7 @@ export default function Services() {
       icon: <FaGlassCheers />,
       title: "Eventos sociales",
       description:
-        "Fiestas de Egresados, cumpleaños, salidas. Que tu belleza sea el centro de atención en cualquier ocasión. ",
+        "¿Fiestas de Egresados, cumpleaños, salidas? Que tu belleza sea el centro de atención en cualquier ocasión.",
     },
     {
       icon: <BsStars />,

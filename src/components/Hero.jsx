@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
           <div className="md:w-1/2">
             <img
-              className="rounded-md shadow-xl transform rotate-3"
+              className="rounded-md shadow-xl transform md:rotate-3"
               src="/img/337323979_232625065802001_4733831277775500009_n.jpg"
               alt="hero image"
             />

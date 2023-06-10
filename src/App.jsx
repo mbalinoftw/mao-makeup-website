@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Gallery from './components/Gallery'
 import About from './components/About'
 import Services from './components/Services'
+import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
 
 export default function App() {
 
@@ -16,6 +18,8 @@ export default function App() {
       <About />
       <Services />
       <Gallery />
+      <Testimonials />
+      <Footer />
     </div>
   )
 }

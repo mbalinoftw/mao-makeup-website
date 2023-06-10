@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
+import { navbarLinks, socialLinks } from '../utils/utils';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const lastScrollTop = useRef(0);
 
@@ -25,41 +25,8 @@ export default function Navbar() {
     };
   }, [lastScrollTop]);
 
-  const navbarLinks = [
-    {
-      label: "inicio",
-      url: "#",
-    },
-    {
-      label: "quién soy",
-      url: "#about",
-    },
-    {
-      label: "servicios",
-      url: "#services",
-    },
-    {
-      label: "galería",
-      url: "#gallery",
-    },
-    {
-      label: "contacto",
-      url: "#contact",
-    },
-  ];
 
-  const socialLinks = [
-    {
-      label: "whatsapp",
-      url: "https://wa.me/5491123534749",
-      color: "#18B920",
-    },
-    {
-      label: "instagram",
-      url: "https://www.instagram.com/maomakeup_beauty/",
-      color: "#AC3292",
-    },
-  ];
+  
 
   return (
     <nav

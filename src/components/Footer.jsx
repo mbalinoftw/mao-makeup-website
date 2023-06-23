@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <ul className=""></ul>
           </div>
-          <span className="">©{new Date().getFullYear()} MAO Makeup & Hairstyle. Todos los derechos reservados.</span>
+          <span className="text-center">©{new Date().getFullYear()} MAO Makeup & Hairstyle. Todos los derechos reservados.</span>
         </div>
       </Container>
     </footer>

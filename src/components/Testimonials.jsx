@@ -50,10 +50,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="relative">
+    <section className="py-20 relative" id="testimonials">
       <Container>
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none text-[#363636]">
+          <h2 className="font-roboto text-[#363636] text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none ">
             Clientas contentas
           </h2>
         </div>
@@ -80,7 +80,7 @@ export default function Testimonials() {
           }}>
           {testimonials.map((t, index) => (
             <SwiperSlide key={index}>
-              <div className="relative mt-8 px-6 py-8 min-h-[9rem] flex items-center bg-white rounded-md shadow-md text-[#363636]">
+              <div className="relative mt-8 px-6 py-8 min-h-[9rem] flex items-center bg-white rounded-md shadow-md ">
                 <ImQuotesLeft className="absolute z-50 -top-4 left-4 text-4xl" />
                 <p className="pb-2 italic">{t.text}</p>
                 <span className="absolute bottom-4 right-6 font-bold">{t.client}</span>

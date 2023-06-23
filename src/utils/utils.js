@@ -16,6 +16,10 @@ export const navbarLinks = [
     url: "#gallery",
   },
   {
+    label: "testimonios",
+    url: "#testimonials",
+  },
+  {
     label: "contacto",
     url: "#contact",
   },

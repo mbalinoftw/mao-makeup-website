@@ -20,21 +20,20 @@ export default function Services() {
     },
     {
       icon: <FaGlassCheers />,
-      title: "Eventos sociales",
+      title: "eventos sociales",
       description:
         "¿Fiestas de Egresados, cumpleaños, salidas? Que tu belleza sea el centro de atención en cualquier ocasión.",
     },
     {
       icon: <BsStars />,
-      title: "Asesoría de imagen",
+      title: "asesoría de imagen",
       description:
         "Ya sea que prefieras un estilo sencillo o sofisticado y elegante, te ayudo a elegir el look que mejor se adapte a vos.",
     },
     {
       icon: <GiPhotoCamera />,
       title: "sesión de fotos",
-      description:
-        "Te aseguramos que luzcas impecable frente a la cámara. Captura tu belleza y sentite una modelo profesional.",
+      description: "Lucí impecable frente a la cámara. Captura tu belleza y sentite una modelo profesional.",
     },
     {
       icon: <GiGraduateCap />,
@@ -48,7 +47,8 @@ export default function Services() {
     <section className="py-16" id="services">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none text-[#363636]">
+          <h2
+            className={`relative font-roboto text-[#363636] text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none`}>
             Servicios
           </h2>
         </div>
@@ -60,10 +60,10 @@ export default function Services() {
               <div className="mb-4 grid place-items-center w-12 h-12 bg-[#D1AAAB] text-white text-xl rounded-full">
                 {s.icon}
               </div>
-              <h3 className="mb-2 text-xl md:text-2xl font-extrabold tracking-tight leading-none text-[#363636] capitalize">
+              <h3 className="mb-2 font-roboto text-[#363636] text-xl md:text-2xl font-extrabold tracking-tight leading-none capitalize">
                 {s.title}
               </h3>
-              <p className="leading-relaxed text-[#615C60]">{s.description}</p>
+              <p className="leading-relaxed ">{s.description}</p>
             </article>
           ))}
         </div>

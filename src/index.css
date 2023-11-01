@@ -2,10 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .font-roboto {
   font-family: "Roboto Serif", serif;
 }
 
 .font-base {
   font-family: "Roboto", sans-serif;
+}
+
+.font-galantis {
+  font-family: "Galantis", sans-serif;
+}
+
+.font-mao {
+  font-family: 'Gilroy-Light', sans-serif;
+}
+
+.font-hero {
+  font-family: 'Bodoni Moda', serif;
+}
+
+@layer components {
+  .section-title {
+    @apply font-roboto text-[#363636] text-3xl md:text-4xl tracking-tight leading-none;
+  }
 }

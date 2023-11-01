@@ -16,12 +16,20 @@ export default function Testimonials() {
       client: "@benditamisuerte",
     },
     {
+      text: "Gracias aye! 😍 me quiero volver a casar para que me vuelvas a peinar 😂",
+      client: "@belii.a",
+    },
+    {
       text: "Súper recomendable!! Es una genia!!",
       client: "@norasciambarella",
     },
     {
       text: "Genia total. Gracias aye por todo ❤️",
       client: "@juli_cop",
+    },
+    {
+      text: "Gracias por tan hermoso peinado y sobre todo tu buena onda❤️",
+      client: "@melisamedero",
     },
     {
       text: "Hermoso todo ❤️ Gracias!!",
@@ -32,16 +40,8 @@ export default function Testimonials() {
       client: "@euge.pedemonte",
     },
     {
-      text: "Gracias aye! 😍 me quiero volver a casar para que me vuelvas a peinar 😂",
-      client: "@belii.a",
-    },
-    {
       text: "Grosaaaa aye!!! Te pasaste!!! Ame el make up y peinado… me duró todaaa la fiesta 🙌🔥.",
       client: "@belii.a",
-    },
-    {
-      text: "Gracias por tan hermoso peinado y sobre todo tu buena onda❤️",
-      client: "@melisamedero",
     },
     {
       text: "hermoso maquillaje y peinado❤️😘🥰",
@@ -53,9 +53,7 @@ export default function Testimonials() {
     <section className="py-20 relative" id="testimonials">
       <Container>
         <div className="text-center mb-8">
-          <h2 className="font-roboto text-[#363636] text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none ">
-            Clientas contentas
-          </h2>
+          <h2 className="section-title">Clientas contentas</h2>
         </div>
         <Swiper
           modules={[Navigation]}
@@ -87,7 +85,7 @@ export default function Testimonials() {
               </div>
             </SwiperSlide>
           ))}
-          <div className="p-6 flex justify-between md:justify-center md:gap-8">
+          <div className="p-6 flex justify-center gap-8">
             <SlidePrevButton />
             <SlideNextButton />
           </div>

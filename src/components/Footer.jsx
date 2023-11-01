@@ -53,7 +53,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   className={`grid place-items-center text-white rounded-full`}>
-                  <i className={`fa-brands fa-${link.label} text-[${link.color}] text-5xl opacity-70`}></i>
+                  <i className={`fa-brands fa-${link.label} text-white text-5xl opacity-70`}></i>
                 </a>
               </li>
             ))}

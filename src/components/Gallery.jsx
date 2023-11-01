@@ -7,9 +7,7 @@ export default function MyGallery() {
     <section className="py-20" id="gallery">
       <Container>
         <div className="text-center mb-12">
-          <h2 className="font-roboto text-[#363636] text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none ">
-            Galería
-          </h2>
+          <h2 className="section-title">Galería</h2>
         </div>
         <Gallery>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
@@ -20,7 +18,12 @@ export default function MyGallery() {
                 width="1600"
                 height="2000">
                 {({ ref, open }) => (
-                  <img ref={ref} className='rounded-md' onClick={open} src="/img/280595178_569166404590718_164566642631978337_n.jpg" />
+                  <img
+                    ref={ref}
+                    className="rounded-md"
+                    onClick={open}
+                    src="/img/280595178_569166404590718_164566642631978337_n.jpg"
+                  />
                 )}
               </Item>
               <Item
@@ -29,7 +32,12 @@ export default function MyGallery() {
                 width="1600"
                 height="2000">
                 {({ ref, open }) => (
-                  <img ref={ref} className='rounded-md' onClick={open} src="/img/333077102_544289104435804_2072055950790997710_n.jpg" />
+                  <img
+                    ref={ref}
+                    className="rounded-md"
+                    onClick={open}
+                    src="/img/333077102_544289104435804_2072055950790997710_n.jpg"
+                  />
                 )}
               </Item>
             </div>
@@ -40,7 +48,12 @@ export default function MyGallery() {
                 width="1600"
                 height="2000">
                 {({ ref, open }) => (
-                  <img ref={ref} className='rounded-md' onClick={open} src="/img/344852031_126269637112257_101586932476997810_n.jpg" />
+                  <img
+                    ref={ref}
+                    className="rounded-md"
+                    onClick={open}
+                    src="/img/344852031_126269637112257_101586932476997810_n.jpg"
+                  />
                 )}
               </Item>
               <Item
@@ -49,7 +62,12 @@ export default function MyGallery() {
                 width="1600"
                 height="2000">
                 {({ ref, open }) => (
-                  <img ref={ref} className='rounded-md' onClick={open} src="/img/280268122_565362708227852_8394539402376855037_n.jpg" />
+                  <img
+                    ref={ref}
+                    className="rounded-md"
+                    onClick={open}
+                    src="/img/280268122_565362708227852_8394539402376855037_n.jpg"
+                  />
                 )}
               </Item>
             </div>
@@ -60,7 +78,12 @@ export default function MyGallery() {
                 width="1600"
                 height="2000">
                 {({ ref, open }) => (
-                  <img ref={ref} className='rounded-md' onClick={open} src="/img/312340152_816635736119954_8133259678295405430_n.jpg" />
+                  <img
+                    ref={ref}
+                    className="rounded-md"
+                    onClick={open}
+                    src="/img/312340152_816635736119954_8133259678295405430_n.jpg"
+                  />
                 )}
               </Item>
               <Item
@@ -69,7 +92,12 @@ export default function MyGallery() {
                 width="1600"
                 height="2000">
                 {({ ref, open }) => (
-                  <img ref={ref} className='rounded-md' onClick={open} src="/img/265991269_621320598904645_8482986475709278680_n.jpg" />
+                  <img
+                    ref={ref}
+                    className="rounded-md"
+                    onClick={open}
+                    src="/img/265991269_621320598904645_8482986475709278680_n.jpg"
+                  />
                 )}
               </Item>
             </div>

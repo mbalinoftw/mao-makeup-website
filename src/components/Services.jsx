@@ -1,70 +1,60 @@
-import React from "react";
 import Container from "./Container";
-import { GiDiamondRing, GiTiara, GiPhotoCamera, GiGraduateCap } from "react-icons/gi";
+import { GiDiamondRing, GiTiara, GiGraduateCap, GiPhotoCamera } from "react-icons/gi";
 import { BsStars } from "react-icons/bs";
-import { FaGlassCheers } from "react-icons/fa";
+import ServiceCard from "./ServiceCard";
 
 export default function Services() {
   const services = [
     {
+      thumbnail: "/img/novias/280595178_569166404590718_164566642631978337_n.jpg",
       icon: <GiDiamondRing />,
       title: "novias",
       description:
-        "¿Querés lucir radiante en el día más especial de tu vida? Te garantizo un maquillaje y peinado perfectos que harán resaltar tu belleza única.",
+        "Disfrutá de una experiencia de maquillaje y peinado profesional para que te sientas una novia hermosa y segura.",
+      url: "/servicios/novias",
     },
     {
+      thumbnail: "/img/quinces/265991269_621320598904645_8482986475709278680_n.jpg",
       icon: <GiTiara />,
       title: "15 años",
       description:
-        "Merecés una noche inolvidable. Celebrá tu fiesta de quince con un peinado y maquillaje que hará que brilles como nunca.",
+        "Merecés una noche inolvidable. Celebrá tu fiesta de quince con un look que hará que brilles como nunca.",
+      url: "/servicios/quinces",
     },
     {
-      icon: <FaGlassCheers />,
-      title: "eventos sociales",
-      description:
-        "¿Fiestas de Egresados, cumpleaños, salidas? Que tu belleza sea el centro de atención en cualquier ocasión.",
-    },
-    {
+      thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
       icon: <BsStars />,
-      title: "asesoría de imagen",
+      title: "sociales",
       description:
-        "Ya sea que prefieras un estilo sencillo o sofisticado y elegante, te ayudo a elegir el look que mejor se adapte a vos.",
+        "¿Cumpleaños, casamientos, fiestas de fin de año? Que tu belleza sea el centro de atención en cualquier ocasión.",
+      url: "/servicios/sociales",
     },
     {
+      thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
       icon: <GiPhotoCamera />,
       title: "sesión de fotos",
-      description: "Lucí impecable frente a la cámara. Captura tu belleza y sentite una modelo profesional.",
+      description: "Te ayudo a conseguir un efecto profesional en tus fotos",
+      url: "/servicios/sesion-de-fotos",
     },
     {
+      thumbnail: "/img/aye-1.jpg",
       icon: <GiGraduateCap />,
       title: "clases de automaquillaje",
       description:
         "¿Querés aprender a maquillarte como una experta? Te enseño todos los secretos y técnicas necesarias para realzar tu belleza todos los días.",
+      url: "/servicios/clases-de-automaquillaje",
     },
   ];
 
   return (
-    <section className="py-16" id="services">
+    <section className="py-16" id="servicios">
       <Container>
         <div className="text-center mb-12">
-          <h2
-            className={`relative font-roboto text-[#363636] text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none`}>
-            Servicios
-          </h2>
+          <h2 className="section-title">Servicios</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-          {services.map((s, index) => (
-            <article
-              key={index}
-              className="p-6 flex flex-col items-center md:items-start rounded-lg hover:bg-[#E5C5C6]/25 text-center md:text-left transition-color duration-300 cursor-pointer">
-              <div className="mb-4 grid place-items-center w-12 h-12 bg-[#D1AAAB] text-white text-xl rounded-full">
-                {s.icon}
-              </div>
-              <h3 className="mb-2 font-roboto text-[#363636] text-xl md:text-2xl font-extrabold tracking-tight leading-none capitalize">
-                {s.title}
-              </h3>
-              <p className="leading-relaxed ">{s.description}</p>
-            </article>
+        <div className="space-y-6 lg:space-y-8">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} i={index} />
           ))}
         </div>
       </Container>

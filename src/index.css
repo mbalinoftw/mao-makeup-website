@@ -25,6 +25,17 @@
 
 @layer components {
   .section-title {
-    @apply font-roboto text-[#363636] text-3xl md:text-4xl tracking-tight leading-none;
+    @apply relative mb-16 font-roboto text-[#363636] text-3xl md:text-4xl lg:text-5xl text-center tracking-tight leading-none;
+  }
+
+  .section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 4px;
+    background-color: #E5C5C6;
   }
 }

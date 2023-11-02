@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import { navbarLinks, socialLinks } from "../utils/utils";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +30,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`font-hero py-4 fixed z-50 top-0 left-0 right-0 bg-[#E5C5C6] transform ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        } transition duration-500`}>
+        className={`font-hero py-4 fixed z-50 top-0 left-0 right-0 bg-slate-100 transition duration-500 transform 
+        ${isVisible ? `translate-y-0` : "-translate-y-full"}`}>
         <Container>
           <div className="flex items-center justify-between">
             <Link to="/" className="">
@@ -40,13 +39,13 @@ export default function Navbar() {
             </Link>
             <ul className="hidden md:flex items-center gap-4">
               <li className="">
-                <Link to="/" className="text-white text-lg hover:text-[#D3898A]">
+                <a href="#" className="text-[#363636] lg:text-lg hover:text-[#D3898A]">
                   Inicio
-                </Link>
+                </a>
               </li>
               <li className="relative group py-2">
-                <h3 className="text-white text-lg hover:text-[#D3898A] cursor-pointer">Servicios</h3>
-                <ul className="hidden group-hover:block absolute w-64 top-1 left-0 mt-8 px-6 py-4 bg-[#E7C9CA] text-white rounded-md shadow-lg">
+                <h3 className="text-[#363636] lg:text-lg hover:text-[#D3898A] cursor-pointer"><a href="#servicios">Servicios</a></h3>
+                <ul className="hidden group-hover:block absolute w-64 top-1 left-0 mt-8 px-6 py-4 bg-slate-50 text-[#363636] rounded-md shadow-lg">
                   <li className="">
                     <Link to="/servicios/novias" className="text-sm hover:text-[#D3898A]">
                       Novias
@@ -80,14 +79,14 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="">
-                <Link to="/#acerca-de-mi" className="text-white text-lg hover:text-[#D3898A]">
+                <a href="/#acerca-de-mi" className="text-[#363636] lg:text-lg hover:text-[#D3898A]">
                   Acerca de mi
-                </Link>
+                </a>
               </li>
               <li className="">
-                <Link to="/contacto" className="text-white text-lg hover:text-[#D3898A]">
+                <a href="/#contacto" className="text-[#363636] lg:text-lg hover:text-[#D3898A]">
                   Contacto
-                </Link>
+                </a>
               </li>
             </ul>
             <ul className="hidden md:flex items-center">
@@ -97,7 +96,7 @@ export default function Navbar() {
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
-                    className={`w-8 h-8 hidden md:grid md:place-items-center text-white rounded-full`}>
+                    className={`w-8 h-8 hidden md:grid md:place-items-center text-[#363636] rounded-full`}>
                     <i className={`fa-brands fa-${link.label} text-2xl opacity-70`}></i>
                   </a>
                 </li>
@@ -113,7 +112,7 @@ export default function Navbar() {
         <div className="h-screen fixed z-50 inset-0 bg-[#E0AEAD] overflow-hidden" id="mobile-menu">
           <div className="container mx-auto p-6 flex justify-end">
             <button
-              className="relative z-50 top-3 text-white md:hidden text-2xl"
+              className="relative z-50 top-3 text-[#363636] md:hidden text-2xl"
               id="close-btn"
               onClick={() => setIsOpen(false)}>
               <FaTimes />
@@ -123,7 +122,7 @@ export default function Navbar() {
             <a href="#" className="animate__animated animate__fadeIn absolute top-16">
               <img src="logo-mobile.png" alt="logo" className="object-cover w-24" />
             </a>
-            <ul className="md:hidden flex flex-col text-center text-3xl text-white" id="mobile-links">
+            <ul className="md:hidden flex flex-col text-center text-3xl text-[#363636]" id="mobile-links">
               {navbarLinks.map((link, index) => (
                 <li
                   key={index}
@@ -140,7 +139,7 @@ export default function Navbar() {
             {socialLinks.map((link, index) => (
               <li
                 key={index}
-                className="animate__animated animate__fadeInUp p-2 text-white text-4xl rounded-full bg-transparent"
+                className="animate__animated animate__fadeInUp p-2 text-[#363636] text-4xl rounded-full bg-transparent"
                 style={{ animationDelay: `${index * 0.1 + 0.3}s` }}>
                 <a href={link.url} target="_blank" rel="noreferrer" className="">
                   <i className={`fa-brands fa-${link.label}`}></i>

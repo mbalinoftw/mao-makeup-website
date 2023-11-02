@@ -8,7 +8,7 @@ export default function App() {
   // rosa #E5C5C6 #D1AAAB #D3898A negro #363636 #615C60
 
   return (
-    <div className="bg-[#E5C5C6]/30 text-[#363636]/80 font-base text-[16px] scroll-smooth">
+    <div className="bg-slate-100 text-[#363636]/80 font-base text-[16px] scroll-smooth">
       <BrowserRouter>
         <Navbar />
         <Routes>

@@ -1,5 +1,5 @@
 import Container from "./Container";
-import { GiDiamondRing, GiTiara, GiGraduateCap, GiPhotoCamera } from "react-icons/gi";
+import { GiDiamondRing, GiTiara, GiGraduateCap, GiPhotoCamera, GiWineGlass } from "react-icons/gi";
 import { BsStars } from "react-icons/bs";
 import ServiceCard from "./ServiceCard";
 
@@ -23,17 +23,24 @@ export default function Services() {
     },
     {
       thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
-      icon: <BsStars />,
+      icon: <GiWineGlass />,
       title: "sociales",
       description:
-        "¿Cumpleaños, casamientos, fiestas de fin de año? Que tu belleza sea el centro de atención en cualquier ocasión.",
+        "¿Cumpleaños, fiestas de egresados, eventos? Que tu belleza sea el centro de atención en cualquier ocasión.",
       url: "/servicios/sociales",
+    },
+    {
+      thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
+      icon: <BsStars />,
+      title: "glitter bar",
+      description: "El arte y la diversión se unen para darle un toque mágico a tus eventos.",
+      url: "/servicios/glitter-bar",
     },
     {
       thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
       icon: <GiPhotoCamera />,
       title: "sesión de fotos",
-      description: "Te ayudo a conseguir un efecto profesional en tus fotos",
+      description: "Te ayudo a conseguir un efecto profesional en tus fotos.",
       url: "/servicios/sesion-de-fotos",
     },
     {
@@ -49,9 +56,7 @@ export default function Services() {
   return (
     <section className="py-16" id="servicios">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="section-title">Servicios</h2>
-        </div>
+        <h2 className="section-title">Servicios</h2>
         <div className="space-y-6 lg:space-y-8">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} i={index} />

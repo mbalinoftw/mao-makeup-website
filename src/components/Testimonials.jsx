@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import Container from "./Container";
 import { ImQuotesLeft } from "react-icons/im";
 
@@ -52,11 +52,9 @@ export default function Testimonials() {
   return (
     <section className="py-20 relative" id="testimonials">
       <Container>
-        <div className="text-center mb-8">
-          <h2 className="section-title">Clientas contentas</h2>
-        </div>
+        <h2 className="section-title">Clientas contentas</h2>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           loop
           navigation
           autoplay={{

@@ -1,5 +1,4 @@
-import Container from "./Container";
-import { GiDiamondRing, GiTiara, GiGraduateCap, GiPhotoCamera, GiWineGlass } from "react-icons/gi";
+import { GiDiamondRing, GiTiara, GiGraduateCap, GiPhotoCamera } from "react-icons/gi";
 import { BsStars } from "react-icons/bs";
 import ServiceCard from "./ServiceCard";
 
@@ -11,7 +10,6 @@ export default function Services() {
       title: "novias",
       description:
         "Disfrutá de una experiencia de maquillaje y peinado profesional para que te sientas una novia hermosa y segura.",
-      url: "/servicios/novias",
     },
     {
       thumbnail: "/img/quinces/265991269_621320598904645_8482986475709278680_n.jpg",
@@ -19,50 +17,38 @@ export default function Services() {
       title: "15 años",
       description:
         "Merecés una noche inolvidable. Celebrá tu fiesta de quince con un look que hará que brilles como nunca.",
-      url: "/servicios/quinces",
-    },
-    {
-      thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
-      icon: <GiWineGlass />,
-      title: "sociales",
-      description:
-        "¿Cumpleaños, fiestas de egresados, eventos? Que tu belleza sea el centro de atención en cualquier ocasión.",
-      url: "/servicios/sociales",
     },
     {
       thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
       icon: <BsStars />,
-      title: "glitter bar",
-      description: "El arte y la diversión se unen para darle un toque mágico a tus eventos.",
-      url: "/servicios/glitter-bar",
-    },
-    {
-      thumbnail: "/img/sociales/337323979_232625065802001_4733831277775500009_n.jpg",
-      icon: <GiPhotoCamera />,
-      title: "sesión de fotos",
-      description: "Te ayudo a conseguir un efecto profesional en tus fotos.",
-      url: "/servicios/sesion-de-fotos",
-    },
-    {
-      thumbnail: "/img/aye-1.jpg",
-      icon: <GiGraduateCap />,
-      title: "clases de automaquillaje",
+      title: "sociales",
       description:
-        "¿Querés aprender a maquillarte como una experta? Te enseño todos los secretos y técnicas necesarias para realzar tu belleza todos los días.",
-      url: "/servicios/clases-de-automaquillaje",
+        "¿Cumpleaños, fiestas de egresados, eventos? Que tu belleza sea el centro de atención en cualquier ocasión.",
+    },
+    {
+      thumbnail: "/img/sociales/asd.jpeg",
+      icon: <GiPhotoCamera />,
+      title: "producciones",
+      description: "Te ayudo a conseguir un efecto profesional en tus sesiones de fotos y producciones audiovisuales.",
+    },
+    {
+      thumbnail: "/img/sociales/IMG_5290.jpg",
+      icon: <GiGraduateCap />,
+      title: "cursos",
+      description: "Aprendé todos los secretos y técnicas para realzar tu belleza todos los días con mi curso de automaquillaje.",
     },
   ];
 
   return (
-    <section className="py-16" id="servicios">
-      <Container>
+    <section className="py-20" id="servicios">
+      <div className="max-w-screen-lg mx-auto px-4">
         <h2 className="section-title">Servicios</h2>
-        <div className="space-y-6 lg:space-y-8">
-          {services.map((service, index) => (
-            <ServiceCard key={index} service={service} i={index} />
+        <div className="flex flex-wrap justify-center gap-4">
+          {services.map(({ thumbnail, icon, title, description }) => (
+            <ServiceCard key={title} thumbnail={thumbnail} icon={icon} title={title} description={description} />
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

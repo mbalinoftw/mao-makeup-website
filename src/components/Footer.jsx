@@ -28,7 +28,7 @@ export default function Footer() {
   const socialLinks = [
     {
       label: "whatsapp",
-      url: "https://wa.me/5491123534749",
+      url: "https://wa.me/+5491164256355",
       color: "#18B920",
     },
     {
@@ -61,7 +61,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <ul className=""></ul>
           </div>
-          <span className="text-center">©{new Date().getFullYear()} MAO Makeup & Hairstyle. Todos los derechos reservados.</span>
+          <span className="text-center">
+            ©{new Date().getFullYear()} MAO Makeup & Hairstyle. Todos los derechos reservados.
+          </span>
         </div>
       </Container>
     </footer>

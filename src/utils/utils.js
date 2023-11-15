@@ -12,6 +12,14 @@ export const navbarLinks = [
     url: "#acerca-de-mi",
   },
   {
+    label: "galería",
+    url: "#galeria",
+  },
+  {
+    label: "testimonios",
+    url: "#testimonios",
+  },
+  {
     label: "contacto",
     url: "#contacto",
   },
@@ -20,7 +28,7 @@ export const navbarLinks = [
 export const socialLinks = [
   {
     label: "whatsapp",
-    url: "https://wa.me/5491123534749",
+    url: "https://wa.me/+5491164256355",
   },
   {
     label: "instagram",

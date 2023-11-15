@@ -50,9 +50,9 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 relative" id="testimonials">
+    <section className="py-20 relative" id="testimonios">
       <Container>
-        <h2 className="section-title">Clientas contentas</h2>
+        <h2 className="section-title">Testimonios</h2>
         <Swiper
           modules={[Navigation, Autoplay]}
           loop

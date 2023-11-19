@@ -1,19 +1,15 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { fadeInItems } from "../utils/animationVariants";
 
-export default function ServiceCard({ thumbnail, title, icon, description }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.25, once: true });
-
+export default function ServiceCard({ thumbnail, title, icon, description, index }) {
   return (
-    <motion.article
-      ref={ref}
-      style={{
-        transform: isInView ? "translateY(0)" : "translateY(-1.5rem)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 1s",
-      }}
-      className="group w-72 flex flex-col rounded-md hover:shadow-md transition-shadow duration-300">
+    <motion.li
+      variants={fadeInItems}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      custom={index}
+      className="group w-72 flex flex-col bg-white rounded-md hover:shadow-md transition-shadow duration-300">
       <div className="overflow-hidden rounded-t-md">
         <img
           src={thumbnail}
@@ -28,6 +24,6 @@ export default function ServiceCard({ thumbnail, title, icon, description }) {
         <h3 className="mb-2 text-2xl uppercase">{title}</h3>
         <p className="">{description}</p>
       </div>
-    </motion.article>
+    </motion.li>
   );
 }

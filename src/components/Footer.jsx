@@ -39,7 +39,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="pt-10 bg-[#E5C5C6]">
+    <footer className="pt-16 pb-4 bg-[#E5C5C6]">
       <Container>
         <div className="flex flex-col items-center gap-4">
           <a href="#" className="">

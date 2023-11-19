@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import About from "./components/About";
 import PhotoGallery from "./components/PhotoGallery";
 import Testimonials from "./components/Testimonials";
+import Quote from "./components/Quote";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -19,6 +20,7 @@ export default function App() {
       <About />
       <PhotoGallery />
       <Testimonials />
+      <Quote />
       <Contact />
       <Footer />
     </>

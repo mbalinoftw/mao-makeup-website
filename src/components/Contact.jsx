@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-20 bg-slate-200">
+    <section id="contacto" className="py-24 bg-slate-200">
       <Container>
         <h2 className="section-title">Contacto</h2>
         <div className="md:col-span-2">

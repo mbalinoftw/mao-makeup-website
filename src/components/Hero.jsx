@@ -1,9 +1,12 @@
 import Container from "./Container";
 import { motion } from "framer-motion";
+import img1 from "/img/hero-01.jpg";
+import img2 from "/img/hero-02.jpg";
+import img3 from "/img/hero-03.jpg";
 
 export default function Hero() {
   return (
-    <header className="pt-20 pb-16">
+    <header className="pt-24 pb-16">
       <Container>
         <div className="grid place-items-center grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
           <div className="relative md:order-2 mt-4 md:col-span-7 grid grid-cols-6 items-center gap-2">
@@ -13,7 +16,7 @@ export default function Hero() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2, duration: 0.5 }}
                 className="relative w-2/3 ml-auto rounded-md shadow-lg bg-white p-1 md:p-2"
-                src="/img/peinados/312340152_816635736119954_8133259678295405430_n.jpg"
+                src={img1}
                 alt="hero image"
               />
               <motion.img
@@ -21,7 +24,7 @@ export default function Hero() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.1, duration: 0.5 }}
                 className="relative rounded-md shadow-lg bg-white p-1 md:p-2 z-10"
-                src="/img/sociales/312487740_1731312690558283_8213814717519829527_n.jpg"
+                src={img2}
                 alt="hero image"
               />
             </div>
@@ -31,7 +34,7 @@ export default function Hero() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.2, duration: 0.5 }}
                 className="rounded-md shadow-lg bg-white p-1 md:p-2"
-                src="/img/hero-lg.jpeg"
+                src={img3}
                 alt="hero image"
               />
             </div>

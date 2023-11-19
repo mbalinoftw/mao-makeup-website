@@ -50,7 +50,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 relative" id="testimonios">
+    <section className="py-24 relative" id="testimonios">
       <Container>
         <h2 className="section-title">Testimonios</h2>
         <Swiper

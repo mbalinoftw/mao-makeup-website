@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`font-hero py-4 fixed z-50 top-0 left-0 right-0 bg-slate-100 transition duration-500 transform 
+        className={`py-4 fixed z-50 top-0 left-0 right-0 bg-slate-100 transition duration-500 transform 
         ${isVisible ? `translate-y-0` : "-translate-y-full"}`}>
         <Container>
           <div className="flex items-center justify-between">
@@ -81,7 +81,7 @@ export default function Navbar() {
         </Container>
       </nav>
       {isOpen ? (
-        <div className="font-hero h-screen fixed z-50 inset-0 bg-[#E0AEAD] overflow-hidden" id="mobile-menu">
+        <div className="h-screen fixed z-50 inset-0 bg-[#E0AEAD] overflow-hidden" id="mobile-menu">
           <div className="container mx-auto p-4 flex justify-end">
             <button
               className="relative z-50 top-2 text-[#363636] md:hidden text-2xl"

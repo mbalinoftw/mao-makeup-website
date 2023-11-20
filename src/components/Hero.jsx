@@ -51,7 +51,7 @@ export default function Hero() {
               initial={{ opacity: 0, translateY: "2rem" }}
               animate={{ opacity: 1, translateY: 0 }}
               transition={{ delay: 1.6, duration: 0.5 }}
-              className="font-hero font-semibold text-[#363636] max-w-sm lg:max-w-full mb-4 text-5xl md:text-[3.7rem] lg:text-7xl xl:text-8xl tracking-tight select-none">
+              className="font-semibold text-[#363636] max-w-sm lg:max-w-full mb-4 text-5xl md:text-[3.7rem] lg:text-7xl xl:text-8xl tracking-tight select-none">
               makeup & hairstyle
             </motion.h1>
             <motion.a

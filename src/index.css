@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 
-.font-roboto {
-  font-family: "Roboto Serif", serif;
-}
-
 .font-base {
   font-family: 'Bodoni Moda', serif;
 }

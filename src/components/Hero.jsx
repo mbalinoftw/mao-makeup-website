@@ -6,7 +6,7 @@ import img3 from "/img/hero-03.jpg";
 
 export default function Hero() {
   return (
-    <header className="pt-24 pb-16">
+    <header className="py-24">
       <Container>
         <div className="grid place-items-center grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
           <div className="relative md:order-2 mt-4 md:col-span-7 grid grid-cols-6 items-center gap-2">

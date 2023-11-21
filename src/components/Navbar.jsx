@@ -97,7 +97,7 @@ export default function Navbar() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1, duration: 0.3 }}
               className="absolute top-16">
-              <img src="logo-mobile.png" alt="logo" className="object-cover w-24" />
+              <img src="/logo-mobile.png" alt="logo" className="object-cover w-24" />
             </motion.a>
             <ul className="md:hidden flex flex-col text-center text-3xl text-[#363636]" id="mobile-links">
               {navbarLinks.map((link, index) => (

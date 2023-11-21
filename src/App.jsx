@@ -16,11 +16,11 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
+      <Quote />
       <Services />
       <About />
       <PhotoGallery />
       <Testimonials />
-      <Quote />
       <Contact />
       <Footer />
     </>

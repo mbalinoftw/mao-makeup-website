@@ -29,15 +29,14 @@ export default function About() {
             className="p-4 col-span-2">
             <h3 className="text-lg md:text-xl font-bold">¡Hola! Mi nombre es Ayelen</h3>
             <p className="">
-              Soy una apasionada <strong>maquilladora y peinadora profesional con más de 10 años</strong> en la
-              industria.
+              Soy una apasionada <strong>maquilladora y peinadora profesional con más de 10 años</strong> de experiencia.
             </p>
             <p className="">
               Me formé junto a profesionales de renombre y sigo perfeccionando mis habilidades, manteniendo un profundo
               conocimiento de las últimas tendencias y técnicas.
             </p>
             <p className="">
-              Participé en diversas <strong>producciones fotográficas y campañas audiovisuales</strong> que me
+              Participé en diversas <strong>producciones fotográficas, campañas audiovisuales y desfiles de moda</strong> que me
               permitieron desarrollarme profesionalmente y adaptarme a cualquier tipo de ocasión.
             </p>
             <p className="">

@@ -5,7 +5,7 @@ export default function SlidePrevButton() {
   const swiper = useSwiper();
 
   return (
-    <button onClick={() => swiper.slidePrev()}>
+    <button aria-label="testimonio anterior" onClick={() => swiper.slidePrev()}>
       <FaChevronCircleLeft className="text-4xl md:text-5xl text-[#D1AAAB] rounded-full bg-white" />
     </button>
   );

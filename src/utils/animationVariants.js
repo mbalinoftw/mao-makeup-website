@@ -7,8 +7,8 @@ export const fadeInItems = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.1 * index,
-      duration: 0.5
+      delay: 0.03 * index,
+      duration: 0.3
     },
   }),
 };
@@ -22,7 +22,7 @@ export const fadeIn = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
     }
   },
 };

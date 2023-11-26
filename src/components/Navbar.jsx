@@ -39,6 +39,8 @@ export default function Navbar() {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
+                width="128px"
+                height="42px"
                 src="logo.png"
                 alt="mao makeup logo"
                 className="object-cover w-32"
@@ -68,13 +70,18 @@ export default function Navbar() {
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={`Ir a ${link.label}`}
                     className={`w-8 h-8 hidden md:grid md:place-items-center text-[#363636] hover:text-[#D3898A] rounded-full`}>
                     <i className={`fa-brands fa-${link.label} text-2xl opacity-70`}></i>
                   </a>
                 </motion.li>
               ))}
             </ul>
-            <button className="block md:hidden text-2xl" id="open-btn" onClick={() => setIsOpen(true)}>
+            <button
+              aria-label="Abrir menú de navegación"
+              className="block md:hidden text-2xl"
+              id="open-btn"
+              onClick={() => setIsOpen(true)}>
               <FaBars />
             </button>
           </div>
@@ -84,6 +91,7 @@ export default function Navbar() {
         <div className="h-screen fixed z-50 inset-0 bg-[#E0AEAD] overflow-hidden" id="mobile-menu">
           <div className="container mx-auto p-4 flex justify-end">
             <button
+              aria-label="Cerrar menú de navegación"
               className="relative z-50 top-2 text-[#363636] md:hidden text-2xl"
               id="close-btn"
               onClick={() => setIsOpen(false)}>

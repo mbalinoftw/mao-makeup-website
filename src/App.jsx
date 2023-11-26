@@ -1,28 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import About from "./components/About";
-import PhotoGallery from "./components/PhotoGallery";
-import Testimonials from "./components/Testimonials";
-import Quote from "./components/Quote";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Error404 from "./pages/NotFoundPage";
 
 export default function App() {
-  // rosa #E5C5C6 #D1AAAB #D3898A negro #363636 #615C60
-
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Quote />
-      <Services />
-      <About />
-      <PhotoGallery />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="" element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -2,7 +2,6 @@ import React from "react";
 import Container from "./Container";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animationVariants";
-import img from "/img/about-me.jpg";
 
 export default function About() {
   return (
@@ -16,7 +15,13 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              src={img}
+              src="/img/about-me.webp"
+              srcSet="
+              /img/about-me-sm.webp 395w,
+              /img/about-me-md.webp 790w,
+              /img/about-me.webp 1150w,
+              "
+              sizes="(min-width: 1360px) 395px, (min-width: 780px) 29.82vw, calc(93.7vw - 29px)"
               alt="imagen de Ayelen"
               className="object-cover rounded-full"
             />
@@ -29,15 +34,17 @@ export default function About() {
             className="p-4 col-span-2">
             <h3 className="text-lg md:text-xl font-bold">¡Hola! Mi nombre es Ayelen</h3>
             <p className="">
-              Soy una apasionada <strong>maquilladora y peinadora profesional con más de 10 años</strong> de experiencia.
+              Soy una apasionada <strong>maquilladora y peinadora profesional con más de 10 años</strong> de
+              experiencia.
             </p>
             <p className="">
               Me formé junto a profesionales de renombre y sigo perfeccionando mis habilidades, manteniendo un profundo
               conocimiento de las últimas tendencias y técnicas.
             </p>
             <p className="">
-              Participé en diversas <strong>producciones fotográficas, campañas audiovisuales y desfiles de moda</strong> que me
-              permitieron desarrollarme profesionalmente y adaptarme a cualquier tipo de ocasión.
+              Participé en diversas{" "}
+              <strong>producciones fotográficas, campañas audiovisuales y desfiles de moda</strong> que me permitieron
+              desarrollarme profesionalmente y adaptarme a cualquier tipo de ocasión.
             </p>
             <p className="">
               No hay mayor satisfacción para mi que ver a una clienta sintiéndose hermosa y contenta con su look.{" "}

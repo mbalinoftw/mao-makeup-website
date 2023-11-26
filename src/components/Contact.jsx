@@ -39,7 +39,7 @@ export default function Contact() {
               transform: isInView ? "translateY(0)" : "translateY(-2rem)",
               opacity: isInView ? 1 : 0,
               transition: "all .5s",
-              transitionDelay: ".3s"
+              transitionDelay: ".3s",
             }}
             onSubmit={handleSubmit}
             className="px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-100 rounded-md">
@@ -50,6 +50,7 @@ export default function Contact() {
                   href="https://wa.me/+5491164256355"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Contactame por WhatsApp"
                   className="mt-4 px-6 lg:px-8 py-2 lg:py-3 inline-flex items-center justify-center gap-2 text-white bg-[#24D366] rounded-full">
                   <i className="fa-brands fa-whatsapp text-2xl lg:text-3xl"></i>
                 </a>
@@ -57,6 +58,7 @@ export default function Contact() {
                   href="https://www.instagram.com/direct/t/103810497685454/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Contactame por Instagram"
                   className="mt-4 px-6 lg:px-8 py-2 lg:py-3 inline-flex items-center justify-center gap-2 text-white bg-[#AB30B3] rounded-full">
                   <i className="fa-brands fa-instagram text-2xl lg:text-3xl"></i>
                 </a>
@@ -101,8 +103,9 @@ export default function Contact() {
               <div>
                 <select
                   required
+                  autoComplete
                   className="p-1.5 rounded-md w-full"
-                  id="country"
+                  id="servicio"
                   name="servicio"
                   value={formData?.servicio}
                   onChange={handleChange}>
@@ -194,7 +197,8 @@ export default function Contact() {
             </div>
             <button
               className="mt-2 py-3 col-span-2 w-full md:w-1/2 mx-auto flex items-center justify-center gap-2 rounded-full bg-black text-white"
-              type="submit">
+              type="submit"
+              aria-label="Enviar por WhatsApp">
               <BsFillSendFill />
               <span className="">Enviar por WhatsApp</span>
             </button>

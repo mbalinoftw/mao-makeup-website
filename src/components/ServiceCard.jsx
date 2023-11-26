@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeInItems } from "../utils/animationVariants";
 
-export default function ServiceCard({ thumbnail, title, icon, description, index }) {
+export default function ServiceCard({ thumbnail, srcset, sizes, title, icon, description, index }) {
   return (
     <motion.li
       variants={fadeInItems}
@@ -13,8 +13,10 @@ export default function ServiceCard({ thumbnail, title, icon, description, index
       <div className="overflow-hidden rounded-t-md">
         <img
           src={thumbnail}
+          srcSet={srcset}
+          sizes={sizes}
           alt={title}
-          className="object-center object-cover transform group-hover:scale-110 transition-transform duration-300"
+          className="w-full object-center object-cover transform group-hover:scale-110 transition-transform duration-300"
         />
       </div>
       <div className="p-6 flex-1 flex flex-col items-center justify-center rounded-b-md bg-white text-center">

@@ -1,48 +1,95 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import Container from "./Container";
-import img1 from "/img/01.jpg";
-import img2 from "/img/02.jpg";
-import img3 from "/img/03.jpg";
-import img4 from "/img/04.jpg";
-import img5 from "/img/05.jpg";
-import img6 from "/img/06.jpg";
-import img7 from "/img/07.jpg";
-import img8 from "/img/08.jpg";
-import img9 from "/img/09.jpg";
-import img10 from "/img/10.jpg";
-import img11 from "/img/11.jpg";
-import img12 from "/img/12.jpg";
-import img13 from "/img/13.jpg";
-import img14 from "/img/14.jpg";
-import img15 from "/img/15.jpg";
-import img16 from "/img/16.jpg";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
-import { fadeInItems } from "../utils/animationVariants";
 
 export default function PhotoGallery() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.75, once: true });
 
   const images = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10,
-    img11,
-    img12,
-    img13,
-    img14,
-    img15,
-    img16,
+    {
+      src: "/img/01.webp",
+      srcset: "/img/01-sm.webp 298w, /img/01-md.webp 596w, /img/01.webp 720w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/02.webp",
+      srcset: "/img/02-sm.webp 298w, /img/02-md.webp 596w, /img/02.webp 720w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/03.webp",
+      srcset: "/img/03-sm.webp 298w, /img/03-md.webp 596w, /img/03.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/04.webp",
+      srcset: "/img/04-sm.webp 298w, /img/04-md.webp 596w, /img/04.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/05.webp",
+      srcset: "/img/05-sm.webp 298w, /img/05-md.webp 658w, /img/05.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/06.webp",
+      srcset: "/img/06-sm.webp 298w, /img/06-md.webp 654w, /img/06.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/07.webp",
+      srcset: "",
+      sizes: "",
+    },
+    {
+      src: "/img/08.webp",
+      srcset: "/img/08-sm.webp 298w, /img/08-md.webp 596w, /img/08.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/09.webp",
+      srcset: "/img/09-sm.webp 298w, /img/09-md.webp 596w, /img/09.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/10.webp",
+      srcset: "/img/10-sm.webp 298w, /img/10-md.webp 596w, /img/10.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/11.webp",
+      srcset: "/img/11-sm.webp 298w, /img/11-md.webp 596w, /img/11.webp 720w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/12.webp",
+      srcset: "/img/12-sm.webp 298w, /img/12-md.webp 596w, /img/12.webp 720w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/13.webp",
+      srcset: "/img/13-sm.webp 298w, /img/13-md.webp 596w, /img/13.webp 720w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/14.webp",
+      srcset: "/img/14-sm.webp 298w, /img/14-md.webp 596w, /img/14.webp 1080w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/15.webp",
+      srcset: "/img/15-sm.webp 298w, /img/15-md.webp 596w, /img/15.webp 1280w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
+    {
+      src: "/img/16.webp",
+      srcset: "/img/16-sm.webp 298w, /img/16-md.webp 596w, /img/16.webp 1080w",
+      sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+    },
   ];
+
   return (
     <section className="py-24" id="galeria">
       <Container>
@@ -52,20 +99,21 @@ export default function PhotoGallery() {
         <Gallery>
           <div ref={ref} className="p-2 bg-white grid grid-cols-2 md:grid-cols-4 gap-2 ">
             {images.map((img, index) => (
-              <Item key={img} original={img} thumbnail={img} width="1600" height="2000">
+              <Item key={img.src} original={img.src} thumbnail={img.src} width="1600" height="2000">
                 {({ ref, open }) => (
                   <motion.div
-                    className="overflow-hidden"
-                    variants={fadeInItems}
-                    initial="hidden"
-                    whileInView="visible"
+                    initial={{ translateY: "2rem", opacity: 0 }}
+                    whileInView={{ translateY: 0, opacity: 1, transition: { delay: index * 0.03 } }}
                     viewport={{ once: true }}
-                    custom={index}>
+                    className="overflow-hidden">
                     <img
                       ref={ref}
-                      className="object-cover w-full h-full cursor-pointer hover:scale-110 duration-300"
+                      className="object-cover w-full h-full cursor-pointer hover:scale-110 transition-transform duration-300"
                       onClick={open}
-                      src={img}
+                      src={img.src}
+                      srcSet={img.srcset}
+                      sizes={img.sizes}
+                      alt="foto de galería"
                     />
                   </motion.div>
                 )}

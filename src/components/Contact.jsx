@@ -103,7 +103,6 @@ export default function Contact() {
               <div>
                 <select
                   required
-                  autoComplete
                   className="p-1.5 rounded-md w-full"
                   id="servicio"
                   name="servicio"

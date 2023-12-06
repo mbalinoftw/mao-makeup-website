@@ -1,54 +1,15 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import Container from "./Container";
 import { ImQuotesLeft } from "react-icons/im";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 // Import Swiper styles
 import "swiper/css";
-import SlideNextButton from "./SlideNextButton";
-import SlidePrevButton from "./SlidePrevButton";
+import { testimonials } from '../utils/utils';
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      text: "Que genia, duró impecable mil horas. Gracias ❤️❤️❤️❤️❤️",
-      client: "@benditamisuerte",
-    },
-    {
-      text: "Gracias aye! 😍 me quiero volver a casar para que me vuelvas a peinar 😂",
-      client: "@belii.a",
-    },
-    {
-      text: "Súper recomendable!! Es una genia!!",
-      client: "@norasciambarella",
-    },
-    {
-      text: "Genia total. Gracias aye por todo ❤️",
-      client: "@juli_cop",
-    },
-    {
-      text: "Gracias por tan hermoso peinado y sobre todo tu buena onda❤️",
-      client: "@melisamedero",
-    },
-    {
-      text: "Hermoso todo ❤️ Gracias!!",
-      client: "@neriortiz_",
-    },
-    {
-      text: "Ame mi peinado!!!!! ❤️❤️❤️",
-      client: "@euge.pedemonte",
-    },
-    {
-      text: "Grosaaaa aye!!! Te pasaste!!! Ame el make up y peinado… me duró todaaa la fiesta 🙌🔥.",
-      client: "@belii.a",
-    },
-    {
-      text: "hermoso maquillaje y peinado❤️😘🥰",
-      client: "@pilibte",
-    },
-  ];
-
   return (
     <section className="py-24 relative" id="testimonios">
       <Container>
@@ -90,5 +51,25 @@ export default function Testimonials() {
         </Swiper>
       </Container>
     </section>
+  );
+}
+
+function SlidePrevButton() {
+  const swiper = useSwiper();
+
+  return (
+    <button aria-label="testimonio anterior" onClick={() => swiper.slidePrev()}>
+      <FaChevronCircleLeft className="text-4xl md:text-5xl text-[#D1AAAB] rounded-full bg-white" />
+    </button>
+  );
+}
+
+function SlideNextButton() {
+  const swiper = useSwiper();
+
+  return (
+    <button aria-label="siguiente testimonio" onClick={() => swiper.slideNext()}>
+      <FaChevronCircleRight className="text-4xl md:text-5xl text-[#D1AAAB] rounded-full bg-white" />
+    </button>
   );
 }

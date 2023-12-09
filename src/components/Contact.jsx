@@ -112,7 +112,6 @@ export default function Contact() {
                   <option value="novia">Novia</option>
                   <option value="quince-años">15 Años</option>
                   <option value="social">Social</option>
-                  <option value="glitter-bar">Glitter Bar</option>
                   <option value="sesion-de-fotos">Sesión de fotos</option>
                   <option value="clase-de-automaquillaje">Clase de Automaquillaje</option>
                 </select>
@@ -199,7 +198,7 @@ export default function Contact() {
               type="submit"
               aria-label="Enviar por WhatsApp">
               <BsFillSendFill />
-              <span className="">Enviar por WhatsApp</span>
+              <span className="">Enviar</span>
             </button>
           </form>
         </div>

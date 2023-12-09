@@ -8,7 +8,7 @@ export default function Footer() {
       <Container>
         <div className="flex flex-col items-center gap-4">
           <a href="#" className="">
-            <img src="logo-mobile.png" alt="mao makeup logo" className="object-cover w-32" />
+            <img loading="lazy" src="logo-mobile.png" alt="mao makeup logo" className="object-cover w-32" />
           </a>
           <ul className="flex-1 flex justify-center gap-4">
             {socialLinks.map((link, index) => (

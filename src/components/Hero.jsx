@@ -9,6 +9,7 @@ export default function Hero() {
           <div className="relative md:order-2 mt-4 md:col-span-7 grid grid-cols-6 items-center gap-2">
             <div className="col-span-3 space-y-2">
               <motion.img
+                loading="lazy"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2, duration: 0.5 }}
@@ -23,6 +24,7 @@ export default function Hero() {
                 alt="hero image"
               />
               <motion.img
+                loading="lazy"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.1, duration: 0.5 }}
@@ -39,6 +41,7 @@ export default function Hero() {
             </div>
             <div className="col-span-3">
               <motion.img
+                loading="lazy"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.2, duration: 0.5 }}

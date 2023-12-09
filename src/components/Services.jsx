@@ -1,6 +1,7 @@
-import ServiceCard from "./ServiceCard";
+import { Suspense, lazy } from "react";
 import { GiDiamondRing, GiTiara, GiGraduateCap, GiPhotoCamera } from "react-icons/gi";
 import { BsStars } from "react-icons/bs";
+const ServiceCard = lazy(() => import("./ServiceCard"));
 
 export default function Services() {
   const services = [
@@ -60,16 +61,18 @@ export default function Services() {
         <h2 className="section-title">Servicios</h2>
         <ul className="flex flex-wrap justify-center gap-4">
           {services.map(({ thumbnail, srcset, sizes, icon, title, description }, index) => (
-            <ServiceCard
-              key={title}
-              thumbnail={thumbnail}
-              srcset={srcset}
-              sizes={sizes}
-              icon={icon}
-              title={title}
-              description={description}
-              index={index}
-            />
+            <Suspense>
+              <ServiceCard
+                key={title}
+                thumbnail={thumbnail}
+                srcset={srcset}
+                sizes={sizes}
+                icon={icon}
+                title={title}
+                description={description}
+                index={index}
+              />
+            </Suspense>
           ))}
         </ul>
       </div>

@@ -11,6 +11,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 md:gap-6">
           <div className="">
             <motion.img
+              loading="lazy"
               variants={fadeIn}
               initial="hidden"
               whileInView="visible"

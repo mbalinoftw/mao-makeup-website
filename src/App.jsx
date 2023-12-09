@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Error404 from "./pages/NotFoundPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<HomePage />} />
-          <Route path="" element={<Error404 />} />
+          <Route path="" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </>

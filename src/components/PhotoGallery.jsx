@@ -12,81 +12,97 @@ export default function PhotoGallery() {
       src: "/img/01.webp",
       srcset: "/img/01-sm.webp 298w, /img/01-md.webp 596w, /img/01.webp 720w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de novia"
     },
     {
       src: "/img/02.webp",
       srcset: "/img/02-sm.webp 298w, /img/02-md.webp 596w, /img/02.webp 720w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de novia"
     },
     {
       src: "/img/03.webp",
       srcset: "/img/03-sm.webp 298w, /img/03-md.webp 596w, /img/03.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de novia"
     },
     {
       src: "/img/04.webp",
       srcset: "/img/04-sm.webp 298w, /img/04-md.webp 596w, /img/04.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de mujer social"
     },
     {
       src: "/img/05.webp",
       srcset: "/img/05-sm.webp 298w, /img/05-md.webp 658w, /img/05.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de peinado"
     },
     {
       src: "/img/06.webp",
       srcset: "/img/06-sm.webp 298w, /img/06-md.webp 654w, /img/06.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de mujer social"
     },
     {
       src: "/img/07.webp",
       srcset: "",
       sizes: "",
+      alt: "foto de novia"
     },
     {
       src: "/img/08.webp",
       srcset: "/img/08-sm.webp 298w, /img/08-md.webp 596w, /img/08.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de quinceañera"
     },
     {
       src: "/img/09.webp",
       srcset: "/img/09-sm.webp 298w, /img/09-md.webp 596w, /img/09.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de mujer social"
     },
     {
       src: "/img/10.webp",
       srcset: "/img/10-sm.webp 298w, /img/10-md.webp 596w, /img/10.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de mujer social"
     },
     {
       src: "/img/11.webp",
       srcset: "/img/11-sm.webp 298w, /img/11-md.webp 596w, /img/11.webp 720w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de peinado"
     },
     {
       src: "/img/12.webp",
       srcset: "/img/12-sm.webp 298w, /img/12-md.webp 596w, /img/12.webp 720w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de mujer social"
     },
     {
       src: "/img/13.webp",
       srcset: "/img/13-sm.webp 298w, /img/13-md.webp 596w, /img/13.webp 720w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de mujer social"
     },
     {
       src: "/img/14.webp",
       srcset: "/img/14-sm.webp 298w, /img/14-md.webp 596w, /img/14.webp 1080w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de quinceañera"
     },
     {
       src: "/img/15.webp",
       srcset: "/img/15-sm.webp 298w, /img/15-md.webp 596w, /img/15.webp 1280w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de quinceañera"
     },
     {
       src: "/img/16.webp",
       srcset: "/img/16-sm.webp 298w, /img/16-md.webp 596w, /img/16.webp 1080w",
       sizes: "(min-width: 1360px) 298px, (min-width: 780px) 22.32vw, calc(50vw - 28px)",
+      alt: "foto de peinado"
     },
   ];
 
@@ -107,6 +123,7 @@ export default function PhotoGallery() {
                     viewport={{ once: true }}
                     className="overflow-hidden">
                     <img
+                      loading="lazy"
                       ref={ref}
                       className="object-cover w-full h-full cursor-pointer hover:scale-110 transition-transform duration-300"
                       onClick={open}
